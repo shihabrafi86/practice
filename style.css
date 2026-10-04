@@ -1,0 +1,401 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+:root {
+  --primary-color: #6a9739;
+  --primary-hover-color: #8bc34a;
+}
+/* ***********common css************ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+.website-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.website-layout main {
+  flex: 1;
+}
+.section-heading {
+  text-align: center;
+  padding: 50px;
+}
+.section-heading h2 {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Merriweather", serif;
+  font-weight: 600;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* *****************header section*************** */
+.header {
+  padding: 10px 0;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo img {
+  max-width: 150px;
+}
+.header .main-menu ul {
+  display: flex;
+}
+.header .main-menu ul li a {
+  padding: 20px;
+  color: black;
+  transition: all ease 0.3s;
+}
+.header .main-menu ul li a:hover {
+  color: var(--primary-hover-color);
+}
+.header .cart {
+  display: flex;
+  gap: 15px;
+}
+.header .basket {
+  position: relative;
+}
+.header .cart .basket span {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  font-size: 12px;
+}
+.header .basket a i {
+  color: var(--primary-color);
+}
+.header .user a i {
+  color: black;
+}
+
+/* **********main section********* */
+.banner {
+  padding: 100px 0;
+  background-image: linear-gradient(to top, #f8f6f3, rgba(248, 246, 243, 0.5));
+  position: relative;
+}
+.banner > img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 500px;
+  z-index: -1;
+}
+.banner .container {
+  display: flex;
+}
+.banner .container .image-area,
+.banner .container .content-area {
+  width: 50%;
+}
+.banner .container .image-area img {
+  width: calc(100% - 50px);
+}
+.banner .container .content-area > span {
+  display: block;
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  font-family: "Merriweather", serif;
+}
+.banner .container .content-area h1 {
+  font-size: 58px;
+  font-weight: 700;
+}
+.banner .container .content-area p {
+  font-size: 18px;
+  margin-top: 15px;
+}
+.banner .container .content-area .shop-btn {
+  margin-top: 50px;
+}
+.banner .container .content-area .shop-btn a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: 12px 25px;
+  border-radius: 5px;
+  color: white;
+  gap: 8px;
+}
+.banner .container .content-area .shop-btn a {
+  font-weight: 600;
+}
+.banner .container .content-area .shop-btn a:hover {
+  background-color: var(--primary-hover-color);
+}
+
+/* ***********footer Section************ */
+
+.footer {
+  padding: 100px 0;
+  background-color: black;
+  color: #fff;
+}
+.footer .footer-top {
+  display: flex;
+}
+.footer .footer-top .footer-item {
+  width: 25%;
+}
+.footer .footer-top .footer-item .footer-logo img {
+  max-width: 150px;
+}
+.footer .footer-top .footer-content {
+  font-size: 18px;
+  font-weight: 600;
+  font-style: italic;
+  padding-top: 35px;
+  max-width: 230px;
+}
+.footer .footer-top .footer-item h4 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+.footer .footer-top .footer-item ul li a {
+  font-size: 16px;
+  display: inline-block;
+  margin-bottom: 5px;
+  color: #fff;
+  transition: all ease 0.3s;
+  opacity: 0.7;
+}
+
+.footer .footer-top .footer-item ul li a:hover {
+  opacity: 1;
+}
+
+.footer .container .copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(128, 128, 128, 0.555);
+}
+.footer .container .copyright .copyright-item {
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 15px;
+  color: rgb(255, 255, 255, 0.7);
+}
+
+.footer .copyright .icon {
+  display: flex;
+  gap: 15px;
+}
+.footer .copyright .icon a {
+  margin-top: 15px;
+  color: rgb(255, 255, 255, 0.7);
+  transition: all ease 0.3s;
+}
+.footer .copyright .icon a :hover {
+  color: var(--primary-hover-color);
+}
+
+/* ***********service Section************ */
+.service {
+  background-color: #111111;
+  padding: 35px 0 30px 0;
+}
+.service .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.service .container .service-item {
+  width: calc(25% - (60px / 4));
+  background-color: #303030;
+  padding: 20px 15px;
+  box-sizing: border-box;
+  display: flex;
+}
+.service .container .service-item i {
+  font-size: 22px;
+  color: var(--primary-color);
+}
+
+.service .container .service-item > div {
+  padding: 15px;
+}
+.service .container .service-item > i {
+  padding: 18px;
+}
+
+.service .container .service-item > div a {
+  display: block;
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+  font-family: "Merriweather", serif;
+}
+.service .container .service-item > div span {
+  font-weight: 500;
+  color: #fff;
+  display: block;
+}
+/* ***********product Section************ */
+.product {
+  padding: 150px 0;
+}
+.product .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.product .product-item {
+  width: calc(25% - (45px / 4));
+}
+.product .product-item img {
+  width: 100%;
+}
+.product .product-item .cetegory {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: rgb(17, 17, 17, 0.5);
+}
+.product .product-item .title {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #111111;
+  transition: all ease 0.3s;
+}
+.product .product-item .title:hover {
+  color: var(--primary-hover-color);
+}
+.product .product-item .price {
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgb(17, 17, 17, 0.8);
+}
+/* ***********Review Section************ */
+.review {
+  padding: 100px 0 70px 0;
+  background-image: linear-gradient(to top, #f8f6f3, #fff);
+}
+.review .container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-end;
+}
+.review .review-item {
+  width: calc((100% / 3) - (40px / 3));
+  background-color: #fff;
+  padding: 50px 45px 45px 45px;
+  margin: 80px 0 10px 0;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 10px rgba(40, 40, 40, 0.1);
+  border-radius: 5px;
+}
+.review .stars {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.review .review-item .stars i {
+  color: #ffbb1e;
+}
+.review .review-item p {
+  text-align: center;
+  color: rgb(17, 17, 17, 0.7);
+  line-height: 22px;
+}
+.review .review-item .clint-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  gap: 15px;
+}
+.review .center-box {
+  width: 364px;
+  height: 430px;
+  padding: 45px;
+  margin: 10px 0;
+  background-image: url(images/centerbg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.review .center-box::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #111111;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.5;
+}
+.review .center-box h2 {
+  /* width: 180px; */
+  font-size: 34px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  margin-bottom: 17px;
+}
+.review .center-box p {
+  color: white;
+  margin: 30px 0 80px;
+}
+.review .center-box .btn {
+  text-align: center;
+}
+.review .center-box .btn a {
+  display: inline-block;
+  padding: 10px 25px;
+  color: white;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+}
+.review .center-box .btn a:hover {
+  background-color: var(--primary-hover-color);
+}
